@@ -23,12 +23,22 @@ header {
 main {
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
 }
 
 figure {
+    border-radius: 1rem;
+    overflow: hidden;
     position: relative;
+}
+
+.fig-h {
+    aspect-ratio: 2 / 3;
+}
+
+.fig-q {
+    aspect-ratio: 3 / 2;
 }
 
 figure:hover figcaption {
@@ -37,7 +47,9 @@ figure:hover figcaption {
 
 figure img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    
 }
 
 figcaption {
@@ -63,15 +75,27 @@ figcaption h2 {
 }
 
 @media only screen and (min-width: 701px ) {
-    #img1 {
-        grid-column: 1/4;
-        grid-row: 1/3;
+    
+    .fig-q {
+        grid-column: span 2;
     }
 
-    #img18 {
-        grid-column: 4/6;   
-        grid-row: 1/2;
+    .fig-h {
+        grid-column: span 2;
+        grid-row: span 2;
     }
+
+    #img1 {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+
+    #img2 {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    
 }
 
 
