@@ -12,7 +12,8 @@ h1 {
 
 body {
     display: grid;
-    grid-template-columns: minmax(2rem,1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem,1fr) minmax(min-content, 55rem) minmax(2rem, 1fr);
+    grid-template-rows: auto;
     background-color: rgb(207, 201, 166);
 }
 
@@ -23,7 +24,7 @@ header {
 main {
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
 }
 
@@ -35,10 +36,14 @@ figure {
 
 .fig-h {
     aspect-ratio: 2 / 3;
+    grid-column: span 2;
+    grid-row: span 3;
 }
 
 .fig-q {
     aspect-ratio: 3 / 2;
+    grid-column: span 3;
+    grid-row: span 2;
 }
 
 figure:hover figcaption {
@@ -74,28 +79,10 @@ figcaption h2 {
     width: 80%;
 }
 
-@media only screen and (min-width: 701px ) {
-    
-    .fig-q {
-        grid-column: span 2;
+@media only screen and (min-width: 2000px ) {
+    body {
+        grid-template-columns: minmax(2rem,1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
     }
-
-    .fig-h {
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    #img1 {
-        grid-column: span 4;
-        grid-row: span 1;
-    }
-
-    #img2 {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-
-    
 }
 
 
@@ -106,12 +93,11 @@ figcaption h2 {
 
     .fig-q {
         grid-column: 1/-1;
+        grid-row: auto;
     }
-}
 
-/*
-@media only screen and (max-width: 1919px) {
-    main {
-        grid-template-columns: repeat(4, 1fr);
+    .fig-h {
+        grid-column: span 1;
+        grid-row: auto;
     }
 }
