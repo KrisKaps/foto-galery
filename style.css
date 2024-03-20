@@ -81,6 +81,15 @@ figcaption h2 {
     width: 80%;
 }
 
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: lightgray;
+    padding: 20px;
+
+}
+
+
 @media only screen and (min-width: 2000px ) {
     body {
         grid-template-columns: minmax(2rem,1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
@@ -102,10 +111,4 @@ figcaption h2 {
         grid-column: span 1;
         grid-row: auto;
     }
-}
-
-footer {
-    grid-column: 1 / -1;
-    text-align: center;
-    background-color: lightgray;
 }
