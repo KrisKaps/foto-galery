@@ -8,13 +8,15 @@
 h1 {
     text-align: center;
     margin: 50px;
+    color: white;
+    font-size: 50px
 }
 
 body {
     display: grid;
     grid-template-columns: minmax(2rem,1fr) minmax(min-content, 55rem) minmax(2rem, 1fr);
     grid-template-rows: auto;
-    background-color: rgb(207, 201, 166);
+    background-color: rgb(32, 32, 32);
 }
 
 header {
@@ -100,4 +102,10 @@ figcaption h2 {
         grid-column: span 1;
         grid-row: auto;
     }
+}
+
+footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    background-color: lightgray;
 }
