@@ -9,7 +9,7 @@ h1 {
     text-align: center;
     margin: 50px;
     color: white;
-    font-size: 50px
+    font-size: 50px;
 }
 
 body {
@@ -97,7 +97,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     main {
         grid-template-columns: 1fr 1fr;
     }
