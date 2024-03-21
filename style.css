@@ -36,23 +36,25 @@ main figure {
     border-radius: 1rem;
 }
 
-.fig-h {
+img {
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.fig-h, .fig-h img {
     aspect-ratio: 2 / 3;
     grid-column: span 2;
     grid-row: span 3;
 }
 
-.fig-q {
+.fig-q , .fig-q img{
     aspect-ratio: 3 / 2;
     grid-column: span 3;
     grid-row: span 2;
 }
 
-img {
-    max-width: 100%;
-    object-fit: cover;
-    transition: .2s linear;
-}
+
 
 main figure:hover img {
     cursor: pointer;
@@ -90,7 +92,7 @@ figcaption h2 {
 .popup {
     display: grid;
     grid-template-columns: minmax(2rem,1fr) minmax(min-content, 59rem) minmax(2rem, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     display: none;
     position: fixed;
@@ -112,8 +114,9 @@ figcaption h2 {
 
 .popup .popup-fig{
     max-width: 100%;
-    grid-column: 2/3;
-    grid-row: 2/3;
+    max-height: 80vh;
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 1;
 }
 
 .popup .popup-fig figcaption {
@@ -141,7 +144,6 @@ footer {
     }
     .popup {
         grid-template-columns: minmax(2rem,1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
-        grid-template-rows: 1fr 1fr 1fr;
     }
 }
 
