@@ -16,8 +16,7 @@ h1 {
 
 body {
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 59rem) minmax(2rem,
-            1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 59rem) minmax(2rem, 1fr);
     background-color: rgb(32, 32, 32);
 }
 
@@ -147,6 +146,7 @@ figcaption h2 {
     max-height: 80vh;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    cursor: auto;
 }
 
 .popup .popup-fig figcaption {
