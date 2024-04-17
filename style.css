@@ -120,8 +120,7 @@ figcaption h2 {
 
 .popup {
     display: grid;
-    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 59rem) minmax(2rem,
-            1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 59rem) minmax(2rem, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     display: none;
@@ -131,6 +130,7 @@ figcaption h2 {
     background: rgba(0, 0, 0, 0.9);
     z-index: 100;
     color: white;
+    cursor: pointer;
 }
 
 .popup span {
@@ -139,7 +139,6 @@ figcaption h2 {
     right: 1rem;
     font-size: 3rem;
     font-weight: bolder;
-    cursor: pointer;
     z-index: 100;
 }
 
